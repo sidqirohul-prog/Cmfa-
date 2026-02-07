@@ -48,36 +48,6 @@ proxies:
       headers:
         Host: nirankara.my.id
     udp: true
-  - name: trial3c63-2
-    server: nirankara.my.id
-    port: 443
-    type: vless
-    uuid: 9cf9a9b0-2e2e-45bd-ac6f-5eaa44e30cfe
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: nirankara.my.id
-    network: ws
-    ws-opts:
-      path: /jagoanssh
-      headers:
-        Host: nirankara.my.id
-    udp: true
-  - name: trial3c63-3
-    server: nirankara.my.id
-    port: 443
-    type: vless
-    uuid: aae98731-898a-4cd3-8c7f-d09af2387d63
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: nirankara.my.id
-    network: ws
-    ws-opts:
-      path: /jagoanssh
-      headers:
-        Host: nirankara.my.id
-    udp: true
 
 proxy-groups:
   - name: ID-X
@@ -86,17 +56,13 @@ proxy-groups:
     interval: 300
     proxies:
       - trial3c63
-      - trial3c63-2
-      - trial3c63-3
 
   - name: MIX-X
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - trial3c63
-      - trial3c63-2
-      - trial3c63-3
+      - ttrial3c63
       
   - name: IKLAN
     type: select
@@ -167,5 +133,6 @@ rule-providers:
     type: file
     behavior: domain
     path: ./block.yaml  
+
 
 

@@ -48,7 +48,7 @@ proxies:
       headers:
         Host: nirankara.my.id
     udp: true
-  - name: trial3c63
+  - name: trial3c63-2
     server: nirankara.my.id
     port: 443
     type: vless
@@ -63,7 +63,7 @@ proxies:
       headers:
         Host: nirankara.my.id
     udp: true
-  - name: trial3c63
+  - name: trial3c63-3
     server: nirankara.my.id
     port: 443
     type: vless
@@ -86,8 +86,8 @@ proxy-groups:
     interval: 300
     proxies:
       - trial3c63
-      - trial3c63
-      - trial3c63
+      - trial3c63-2
+      - trial3c63-3
 
   - name: MIX-X
     type: fallback
@@ -95,8 +95,8 @@ proxy-groups:
     interval: 300
     proxies:
       - trial3c63
-      - trial3c63
-      - trial3c63
+      - trial3c63-2
+      - trial3c63-3
       
   - name: IKLAN
     type: select
@@ -167,4 +167,5 @@ rule-providers:
     type: file
     behavior: domain
     path: ./block.yaml  
+
 
